@@ -1,4 +1,7 @@
-<?php include 'includes/header.php'; ?>
+<?php 
+require 'config/auth.php';
+
+include 'includes/header.php'; ?>
 <section class="services-section">
     <h1>Our Services</h1>
     <p>List of services that we provide to the client:</p><br>

@@ -1,4 +1,7 @@
-<?php include 'includes/header.php'; ?>
+<?php
+require 'config/auth.php';
+
+include 'includes/header.php'; ?>
     <section class="media-gallery">
         <h1>Past Works</h1><br>
         <p> These are few demo websites that we had created last year.</p>

@@ -1,4 +1,7 @@
-<?php include 'includes/header.php'; ?>
+<?php
+require 'config/auth.php';
+
+include 'includes/header.php'; ?>
     <section class="about-section">
         <h1>About Us</h1>
         <div class="about-container">

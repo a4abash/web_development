@@ -1,4 +1,7 @@
-<?php include 'includes/header.php'; ?>
+<?php 
+require 'config/auth.php';
+
+include 'includes/header.php'; ?>
         <section class="contact-section">
             <h1 style="text-align:center;">Contact Us</h1>
 

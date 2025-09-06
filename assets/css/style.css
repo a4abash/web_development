@@ -423,3 +423,35 @@ button[type="submit"]:hover {
       color: white;
       cursor: pointer;
     }
+
+    .logout {
+      background-color: #ff4b5c;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 2rem;
+    }
+
+    .login-form {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: 2rem auto;
+    }
+
+    #role {
+      width: 100%;
+      padding: 0.70rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
