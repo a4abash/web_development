@@ -46,6 +46,10 @@ body {
     align-items: center;
     gap: 10px;
 }
+.logo a {
+    color: white;
+    text-decoration: none;
+}
 
 .logo img {
     width: 40px;
@@ -131,6 +135,12 @@ body {
     color: white;
 }
 
+.sidebar-menu a.active {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 4px;
+}
+
 /* Main Content Styles */
 .admin-content {
     margin-top: 60px;
@@ -141,7 +151,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .admin-container {
         grid-template-columns: 1fr;
