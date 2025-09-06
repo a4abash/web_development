@@ -1,6 +1,8 @@
 <?php
 include 'includes/header.php';
 include 'includes/sidebar.php';
+require_once '../../config/auth.php';
+
 ?>
 <main class="admin-content">
     <div class="content-header">

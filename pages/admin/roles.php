@@ -1,7 +1,8 @@
 <?php
 include 'includes/header.php';
 include 'includes/sidebar.php';
-require '../../config/db.php';
+require_once '../../config/auth.php';
+require_once '../../config/db.php';
 try {
     $stmt = $conn->prepare("
         SELECT id, role, description
