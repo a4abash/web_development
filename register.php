@@ -2,7 +2,7 @@
 define('ABSPATH', __DIR__);
 session_start();
 require_once 'config/db.php';
-
+//Fetching the roles besides the admin role.
 $sql = "SELECT id, role FROM roles WHERE role != 'admin'";
 $result = $conn->query($sql);
 $roles = [];
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Username already taken!";
     } else {
         $stmt = $conn->prepare("INSERT INTO users (username, name, email,role_id, password) VALUES (?, ?,?, ?, ?)");
-        $stmt->bind_param("sssss", $username, $name, $email, $role_id,  $password);
+        $stmt->bind_param("sssis", $username, $name, $email, $role_id,  $password);
         if ($stmt->execute()) {
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
