@@ -9,6 +9,13 @@ $rolesTable = "CREATE TABLE IF NOT EXISTS roles (
     description TEXT
 )";
 
+// create permissions table
+$permissionsTable = "CREATE TABLE IF NOT EXISTS permissions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    permission VARCHAR(100) NOT NULL UNIQUE,
+    description TEXT
+)";
+
 // create users table
 $usersTable = "CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -17,6 +24,7 @@ $usersTable = "CREATE TABLE IF NOT EXISTS users (
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     role_id INT NOT NULL DEFAULT 3,
+    status ENUM('active', 'inactive') DEFAULT 'active',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (role_id) REFERENCES roles(id) 
