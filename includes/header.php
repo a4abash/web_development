@@ -28,6 +28,7 @@
                 <li><a href="index.php" class="active">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="services.php">Services</a></li>
+                <li><a href="products.php">Products</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="media.php">Gallery</a></li>
                 <li><a class="logout" href="logout.php">Logout</a></li>
