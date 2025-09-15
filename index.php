@@ -12,7 +12,7 @@ include 'includes/header.php';
 
         <p>We design and develop modern website, mobile application, cloud solution and security services.
             From fast secured hosting to responsive and interactive websites, we turn your dream into reality through digital transformation.</p>
-        <a href="services.html" class="btn">Explore Services</a>
+        <a href="services.php" class="btn">Explore Services</a>
     </div>
 </section>
 

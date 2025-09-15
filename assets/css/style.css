@@ -32,13 +32,17 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
-.logo img {
-  width: 160px;
-  height: 100px;
-  margin-left: 50px;
+.logo-img {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin-left: 10px;
 }
-
+.logo-img:hover {
+    transform: scale(1.1);
+}
 @media (max-width: 768px) {
   .logo img {
     width: 100px;

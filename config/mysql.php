@@ -46,6 +46,14 @@ $productsTable = "CREATE TABLE IF NOT EXISTS products (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (created_by) REFERENCES users(id) ON DELETE SET NULL
 )";
+// create contacts table
+$contactTable = "CREATE TABLE IF NOT EXISTS contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
 
 // insert default roles
 $insertRoles = "INSERT IGNORE INTO roles (role, description) VALUES
@@ -67,6 +75,12 @@ if ($conn->query($usersTable) === TRUE) {
     echo "Table 'users' created successfully.<br>";
 } else {
     echo "Error creating users table: " . $conn->error . "<br>";
+}
+
+if ($conn->query($contactTable) === TRUE) {
+    echo "Table 'contacts' created successfully.<br>";
+} else {
+    echo "Error creating contacts table: " . $conn->error . "<br>";
 }
 
 if ($conn->query($productsTable) === TRUE) {
