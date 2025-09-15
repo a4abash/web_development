@@ -502,6 +502,10 @@ body {
     background-color: #6f42c1;
     color: white;
 }
+.role-member {
+    background-color: #20c997;
+    color: white;
+}
 
 .role-manager {
     background-color: #20c997;
