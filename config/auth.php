@@ -2,7 +2,7 @@
 session_start();
 
 define('BASE_URL', dirname($_SERVER['PHP_SELF']));
-define('LOGIN_URL', 'login.php');
+define('LOGIN_URL', '/login.php');
 
 header('X-Frame-Options: DENY');
 header('X-Content-Type-Options: nosniff');
@@ -15,7 +15,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     session_unset();
     session_destroy();
 
-    header("Location: " . BASE_URL . "/login.php?error=unauthorized");
+header("Location: " . LOGIN_URL . "?error=unauthorized");
     exit;
 }
 
@@ -27,7 +27,7 @@ if (
     error_log("Session timeout for user: " . $_SERVER['REMOTE_ADDR']);
     session_unset();
     session_destroy();
-    header('Location: ' . LOGIN_URL . '?error=session_timeout');
+header("Location: " . LOGIN_URL . "?error=unauthorized");
     exit;
 }
 
